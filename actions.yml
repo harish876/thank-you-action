@@ -1,12 +1,13 @@
-name: 'Thank you Action'
-description:  'say "Thank you" to new pull requests'
-author: 'harish876'
-
+name: 'Hello World'
+description: 'Greet someone and record the time'
 inputs:
-  GITHUB_TOKEN:
-    description:  'GitHub token'
+  who-to-greet:  # id of input
+    description: 'Who to greet'
     required: true
-
+    default: 'World'
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
 runs:
   using: 'node16'
-  main: 'dist/index.js'
+  main: 'index.js'
