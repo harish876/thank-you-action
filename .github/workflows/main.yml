@@ -31,10 +31,11 @@ jobs:
         with:
           branch: "auto-pr-branch"
           base: main
-          title: "demo for auto pr"
+          title: "demo for update pr"
           committer: ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}">
           author: ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}">
           body:
             This is to show update PR creation
           token: ${{ secrets.GITHUB_TOKEN }}
+          delete-branch: true
           
