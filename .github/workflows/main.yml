@@ -37,4 +37,4 @@ jobs:
           body:
             This is to show update PR creation from ${{steps.hello.outputs.version}} to 0.24.0
           token: ${{ secrets.GITHUB_TOKEN }}
-          delete-branch: true
+          
