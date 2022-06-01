@@ -13,6 +13,9 @@ jobs:
       # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
+      
+      - name: extract git commit data
+        uses: rlespinasse/git-commit-data-action@v1.x
 
       - name: Hello world action step
         uses: ./
@@ -21,4 +24,17 @@ jobs:
           who-to-greet: 'Harish'
       # Use the output from the `hello` step
       - name: Get the version
-        run: echo "The time was ${{ steps.hello.outputs.version }}"
+        run: echo "The version to be updated is ${{ steps.hello.outputs.version }}"
+
+      - name: Raise PR
+        uses: peter-evans/create-pull-request@v3
+        with:
+          branch: "auto-pr-branch"
+          base: main
+          title: "demo for auto pr"
+          committer: ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}">
+          author: ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}">
+          body:
+            This is to show update PR creation from ${{steps.hello.outputs.version}} to 0.24.0
+          token: ${{ secrets.GITHUB_TOKEN }}
+          delete-branch: true
