@@ -6,8 +6,8 @@ inputs:
     required: true
     default: 'World'
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  version: # id of output
+    description: 'The current version of the package'
 runs:
   using: 'node16'
   main: 'index.js'
