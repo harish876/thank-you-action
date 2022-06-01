@@ -26,6 +26,7 @@ jobs:
         with:
           who-to-greet: 'Harish'
       - name: Get the version
+        run: echo "The version to be updated is ${{ steps.hello.outputs.version }}"
 
       - name: Raise PR
         uses: peter-evans/create-pull-request@v3
