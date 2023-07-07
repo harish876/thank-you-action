@@ -1,28 +1,28 @@
 {
-  "name": "thank-you-action",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "type": "commonjs",
+  "name": "thank-you-action", 
+  "version": "1.0.0", 
+  "description": "", 
+  "main": "index.js", 
+  "type": "commonjs", 
   "scripts": {
-    "harish": "ncc build src/action.js -o dist",
+    "harish": "ncc build src/action.js -o dist", 
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  }, 
   "repository": {
-    "type": "git",
+    "type": "git", 
     "url": "git+https://github.com/harish876/thank-you-action.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  }, 
+  "keywords": [], 
+  "author": "", 
+  "license": "ISC", 
   "bugs": {
     "url": "https://github.com/harish876/thank-you-action/issues"
-  },
-  "homepage": "https://github.com/harish876/thank-you-action#readme",
+  }, 
+  "homepage": "https://github.com/harish876/thank-you-action#readme", 
   "dependencies": {
-    "@actions/core": "^1.8.2",
-    "@actions/github": "^5.0.3",
-    "@octokit/auth-app": "^3.6.1",
-    "octokit": "^1.7.1"
+    "@actions/core": "1.10.0", 
+    "@actions/github": "5.1.1", 
+    "@octokit/auth-app": "5.0.6", 
+    "octokit": "2.1.0"
   }
 }
